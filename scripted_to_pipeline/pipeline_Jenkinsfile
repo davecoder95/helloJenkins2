@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone Repo') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build Image') {
+            steps {
+                echo 'Starting Build step'
+                script {
+                    app = docker.build("raj80dockerid/jenkinstest","./pushdockerimage/")
+                }
+            }
+        }
+        stage('Docker Push') {
+            steps {
+                script{
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                        app.push("${env.BUILD_NUMBER}")
+        }
+                }
+                }
+            }
+        }
+    }
