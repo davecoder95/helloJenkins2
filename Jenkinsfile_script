@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'TOPIC_NAME', defaultValue: 'DevOps', description: 'Topics to learn')
+        string(name: 'TARGET', defaultValue: 'Dream-Job', description: 'Target goal')
+    }
+
+    stages {
+        //stage('Clone Repo') {
+        //    steps {
+        //        checkout scm
+        //    }
+        //}
+        stage('Call Script') {
+            steps {
+                sh 'chmod +x scripts/sayhello.sh'
+                sh 'scripts/sayhello.sh ${TOPIC_NAME} ${TARGET}'
+            }
+        }
+    }
+}
