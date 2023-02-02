@@ -5,6 +5,7 @@ pipeline {
             steps {
               sh "chmod u+x env/awscred"
 			  sh ". env/awscred"
+			  sh "echo $AWS_ACCESS_KEY_ID"
               }
              }
 			 
