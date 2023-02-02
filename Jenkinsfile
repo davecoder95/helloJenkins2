@@ -6,7 +6,7 @@ pipeline {
               sh "chmod u+x env/awscred"
 			  sh ". env/awscred"
 			  sh "echo printing debasisisiiis"
-			  sh "echo $AWS_ACCESS_KEY_ID"
+			  sh "echo printing this $AWS_ACCESS_KEY_ID   $AWS_SECRET_ACCESS_KEY"
               }
              }
 			 
