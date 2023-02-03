@@ -1,0 +1,67 @@
+debadmim
+sunday123
+
+
+git
+
+git config -–global user.name "davecoder95" 
+git config -–global user.email "debashr95@gmail.com"
+
+
+git init helloJenkins
+--git remote add origin https://github.com/[your-username]/[repository-name.git]
+--git push -u origin master
+
+git remote add origin https://github.com/davecoder95/helloJenkins1.git
+git remote add origin https://github.com/davecoder95/helloJenkins.git
+
+git branch -M main
+git status 
+git add * 
+
+
+echo "# helloJenkins3" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/davecoder95/helloJenkins2.git
+git push -u origin main
+
+
+
+=======================
+
+Go to Git repo and set up a new repository 
+
+local command line 
+1. create a folder git_test
+2. cd git_test 
+3. 
+git config -–global user.name "davecoder95" 
+git config -–global user.email "debashr95@gmail.com"
+
+4. git init
+5. create a sample file 
+6. git add sample.txt
+7  git commit -m "first commit"
+8  git branch -M main
+9  git remote add origin https://github.com/davecoder95/helloJenkins2.git
+10. git push -u origin main
+11. alernate 
+    git push https://github.com/davecoder95/helloJenkins2.git
+
+http://54.208.44.92:8080/github-webhook/
+
+git status 
+git log
+
+-- to switch branches 
+git switch <branchname>
+git checkout <branchname>
+
+
+
+
+
+

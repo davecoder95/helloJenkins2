@@ -1,0 +1,42 @@
+debadmim
+sunday123
+
+http://54.237.60.64:8080/
+
+sudo su
+sudo yum update –y
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade
+sudo amazon-linux-extras install java-openjdk11 -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+http://18.236.187.119:8080/
+
+
+/usr/bin/git
+yum install git -y
+
+http://18.234.130.167:8080/pipeline-syntax/globals
+
+List all the env variables 
+http://18.234.130.167:8080/env-vars.html
+
+
+docker install 
+==============
+sudo yum update -y
+sudo yum install docker -y
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+sudo usermod -a -G docker jenkins
+
+pipeline -job5
+
+
+webhook
+http://54.208.44.92:8080/github-webhook/

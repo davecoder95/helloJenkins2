@@ -1,0 +1,88 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('copy git reo') {
+            steps {
+               git 'https://github.com/davecoder95/HelloRepo.git'
+            }
+        }
+         stage('display branch set') {
+            steps {
+               sh 'git switch master'
+            }
+        }
+        stage('display red me') {
+            steps {
+               sh 'cat infodeb.txt'
+            }
+        }
+    }
+}
+
+checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/saha-rajdeep/kubernetescode.git']])
+
+
+==========================
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Copy repository') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/saha-rajdeep/kubernetescode.git']])
+            }
+        }
+         stage('display readme') {
+            steps {
+                sh 'cat README.md'
+            }
+        }
+         stage('display S3') {
+            steps {
+                sh 'aws s3 ls'
+            }
+        }
+    }
+    post {
+        failure {
+            echo 'job failed' 
+        }
+        always {
+            echo 'job done' 
+        }
+    }
+}
+============================
+
+3) calling another job and passing parameter 
+//from the patret program - 
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('calling ') {
+            steps {
+             build job: 'pipeline -job5', parameters: [string(name: 'BUILDNUMBER', value: env.BUILD_NUMBER)]
+            }
+        }
+    }
+}
+
+====================
+
+Invoke lambda
+ steps {
+          sh 'aws lambda invoke --function-name getbitcoinprice  rsponse.json --region us-east-1'
+       }
+
+
+calling parameter CF 
+	 //sh "aws cloudformation deploy --stack-name ${STACK_NAME} --template-file ${TEMPLATE_NAME} --region ${REGION} --parameter-overrides file://subfolder/${PARAMETERS_FILE_NAME}" 			 
+         
