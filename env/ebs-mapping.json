@@ -1,0 +1,9 @@
+[
+    {
+        "DeviceName": "/dev/sdh",
+        "Ebs": {
+            "VolumeSize": 16,
+			"VolumeType": "gp2"
+        }
+    }
+]
