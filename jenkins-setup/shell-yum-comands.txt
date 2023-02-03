@@ -1,0 +1,4 @@
+yum install -y 
+sudo yum list instlled | grep "git"
+sudp yum list available 
+sudo yum search "find"

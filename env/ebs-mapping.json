@@ -1,6 +1,6 @@
 [
     {
-        "DeviceName": "/dev/sdh",
+        "DeviceName": "/dev/xvda",
         "Ebs": {
             "VolumeSize": 16,
 			"VolumeType": "gp2"
