@@ -4,15 +4,15 @@
     tasks:
       - name: install Apache
         yum:
-          name: httpd
-          state: present
+            name: httpd
+            state: present
 		  
       - name: start Apache server
         service:
-          name: httpd
-          state: started
+            name: httpd
+            state: started
 				  
       - name: Deploy static website 
         copy:
-          src:  index.html
-		  dest: /var/www/html/
+            src:  index.html
+            dest: /var/www/html/
