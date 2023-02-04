@@ -40,3 +40,31 @@ pipeline -job5
 
 webhook
 http://54.208.44.92:8080/github-webhook/
+
+terraform intalll
+======================
+terraform amazon linus2
+=======================
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+
+install Helm 
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
+
+Note : 
+First go to jenkins and add plugin 
+Then go to the global config config and add path in jenkins global conginf 
+1. /usr/bin/git 
+2. /usr/bin 
+
+
+Install ansible
+--------------
+
+sudo yum install ansible
+sudo amazon-linux-extras install ansible2
+

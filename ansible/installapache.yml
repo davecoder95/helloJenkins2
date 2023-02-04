@@ -1,0 +1,19 @@
+- name: Play Web - Create Apache web servers
+    hosts: webservers
+    become: True
+    tasks:
+        - name: install Apache
+        yum:
+          name: httpd
+          state: present
+		  
+      - name: start Apache server
+        services:
+          name: httpd
+          state: started
+		  state: true
+		  
+       - name: Deploy static website 
+        copy:
+          src:  index.html
+		  dest: /var/www/html/

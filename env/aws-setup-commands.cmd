@@ -15,7 +15,7 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaRole  --role-name ec2-jenkins-role
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonSNSFullAccess  --role-name ec2-jenkins-role
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSCloudFormationFullAccess  --role-name ec2-jenkins-role
-
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSAdministratorAccess  --role-name ec2-jenkins-role
 
 
 
