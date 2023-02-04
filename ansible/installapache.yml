@@ -1,6 +1,6 @@
 - name: Play Web - Create Apache web servers
-    hosts: webserver
-    become: True
+    hosts: webservers
+    become: yes
     tasks:
         - name: install Apache
         yum:
