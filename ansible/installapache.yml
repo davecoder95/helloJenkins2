@@ -1,5 +1,5 @@
 - name: Play Web - Create Apache web servers
-    hosts: webservers
+    hosts: webserver
     become: True
     tasks:
         - name: install Apache
@@ -8,12 +8,11 @@
           state: present
 		  
       - name: start Apache server
-        services:
+        service:
           name: httpd
           state: started
-		  state: true
-		  
-       - name: Deploy static website 
+				  
+      - name: Deploy static website 
         copy:
           src:  index.html
 		  dest: /var/www/html/
