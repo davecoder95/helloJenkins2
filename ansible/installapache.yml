@@ -1,8 +1,8 @@
-- name: Create Apache web servers
+- name: Create Apache web servers debasish
     hosts: webservers
     become: yes
     tasks:
-        - name: install Apache
+      - name: install Apache
         yum:
           name: httpd
           state: present
