@@ -1,18 +1,24 @@
-- name: Create Apache web servers debasish
-    hosts: webservers
-    become: yes
-    tasks:
-      - name: install Apache
-        yum:
-            name: httpd
-            state: present
+- name: Create Apache web servers gaanna
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: present
 		  
-      - name: start Apache server
-        service:
-            name: httpd
-            state: started
+    - name: start Apache server
+      service:
+        name: httpd
+        state: started
 				  
-      - name: Deploy static website 
-        copy:
-            src:  index.html
-            dest: /var/www/html/
+    - name: Deploy static website 
+      copy:
+        src:  index.html
+        dest: /var/www/html/
+            
+            
+            
+            
+            
+            
