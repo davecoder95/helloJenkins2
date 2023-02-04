@@ -1,4 +1,4 @@
-- name: Play Web - Create Apache web servers
+- name: Create Apache web servers
     hosts: webservers
     become: yes
     tasks:
