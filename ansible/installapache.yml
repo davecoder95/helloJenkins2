@@ -6,12 +6,10 @@
       yum:
         name: httpd
         state: present
-		  
     - name: start Apache server
       service:
         name: httpd
         state: started
-				  
     - name: Deploy static website 
       copy:
         src:  index.html
